@@ -13,14 +13,14 @@ class HomePage(BasePage):
         super().__init__(page)
         self.search_box = page.get_by_test_id("search-query")
         self.search_result_count = page.get_by_test_id("search-result-count")
-        # TODO B1.1: search_button, search_caption, search_completed, product_names
+        # B1.1
         self.search_button = page.get_by_test_id("search-submit")
         self.search_caption = page.get_by_test_id("search-caption")
         self.search_completed = page.get_by_test_id("search_completed")
         self.product_names = page.get_by_test_id("product-name")
-        # TODO B1.2: no_results
+        # B1.2
         self.no_results = page.get_by_test_id("no-results")
-        # TODO B1.7: sort_select, product_prices
+        # B1.7
         self.sort_select = page.get_by_test_id("sort")
         self.sorting_completed = page.get_by_test_id("sorting_completed")
         self.product_prices = page.get_by_test_id("product-price")
@@ -43,7 +43,6 @@ class HomePage(BasePage):
 
     def sort_by(self, value: str):
         """value: name,asc | name,desc | price,asc | price,desc"""
-        # TODO B1.7
         self.sort_select.select_option(value)
         return self
 
